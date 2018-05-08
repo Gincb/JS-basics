@@ -1,0 +1,18 @@
+body {
+    background-image: url("doodles.png");
+    background-repeat: repeat;
+}
+
+.container {
+    background: white;
+    margin-top: 50px;
+    border-radius: 6px;
+}
+
+#myApp {
+    margin-top: 30px;
+}
+
+#result {
+    margin-top: 30px;
+}

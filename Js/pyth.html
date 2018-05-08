@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="js.css">
+
+    <title>Javascript script</title>
+
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card border-secondary mb-3 mx-auto" style="max-width: 18rem;">
+
+            <div class="card-header">
+                Pitagoro teorema
+            </div>
+
+            <div class="card-body text-secondary">
+                <div>
+                    <img src="https://trello-attachments.s3.amazonaws.com/5a6e45a1ec02b358403fb599/5aa8285e79c615848196107f/e5bc2f0c9a5af338347a24e835a25225/pythagoras-theorem.gif" class="img-fluid" alt="Responsive image">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control text-right" id="Input1" aria-label="Amount (to the nearest dollar)">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">a</span>
+                        </div>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control text-right" id="Input2" aria-label="Amount (to the nearest dollar)">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">b</span>
+                        </div>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <input disabled="disabled" class="form-control text-right" id="Input3" aria-label="Amount (to the nearest dollar)">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">c</span>
+                        </div>
+                    </div>
+
+                    <button onclick="convertEuro()" class="button btn mb-3" id="btn-calculate">Calculate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+        var a_input = document.getElementById('Input1');
+        var b_input = document.getElementById('Input2');
+
+        function convertEuro() {
+            let a = parseFloat(a_input.value);
+            let b = parseFloat(b_input.value);
+            let c = (a * a) + (b * b);
+            let c_final = Math.sqrt(c);
+            document.getElementById('Input3').value = c_final;
+        }
+    </script>
+
+</body>
+
+</html>

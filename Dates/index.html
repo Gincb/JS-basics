@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dates</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+
+<body>
+    <div class="row">
+        <div class="col-4">
+            <div class="form-group">
+                <select class="form-control m-2" id="yearSelect">
+                          <option value="">All</option>
+                          <option value="2018">2018</option>
+                          <option value="2017">2017</option>
+                          <option value="2016">2016</option>
+                          <option value="2015">2015</option>
+                          <option value="2014">2014</option>
+                          <option value="2013">2013</option>
+                          <option value="2012">2012</option>
+                        </select>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary m-2" id="filter">Filter</button>
+            </div>
+            <div id="result">
+
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="CARS.js"></script>
+
+        <script>
+            $("#filter").click(function() {
+                let filterYear = $("#yearSelect").val();
+                let filteredCars = CARS;
+                if (filterYear == "") {
+
+                } else {
+                    filteredCars = filteredByYear(filteredCars, filterYear);
+                }
+
+                displayCars(filteredCars);
+            });
+
+            function filteredByYear(filteredCars, filterYear) {
+                filteredCars = filteredCars.filter(function(car) {
+                    let car_date = new Date(car.date);
+                    return car_date.getFullYear().toString() == filterYear;
+                });
+                return filteredCars;
+            }
+
+            function displayCars(filteredCars) {
+                let h = "";
+                for (let i = 0; i < filteredCars.length; i++) {
+                    h = h + "<p>" + filteredCars[i].brand + " " + filteredCars[i].date + "</p>";
+                }
+                $("#result").html(h);
+            }
+        </script>
+</body>
+
+</html>

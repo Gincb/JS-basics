@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Marvel:400i" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <h1 class="specialFont">SearchForm</h1>
+                    <div id="MyApp">
+
+                        <div class="form-group row">
+                            <label for="Brand" class="col-sm-2 col-form-label">Brand</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="Brand" placeholder="Brand">
+                                <div class="invalid-feedback" id="brand-error-message">Please choose a username. </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="Model" class="col-sm-2 col-form-label">Model</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="Model" placeholder="Model">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" id="btn_search" class="btn btn-primary"><i class="fas fa-search"></i> Search</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div id="top_result">
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="result">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="CARS.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+body {
+    background-color: #f5f8fa;
+    padding: 60px;
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.left-label {
+    min-width: 110px;
+}
+
+.content {
+    min-width: 230px;
+}
